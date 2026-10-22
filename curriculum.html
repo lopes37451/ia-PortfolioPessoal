@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo — Ellen Lopes | Técnico em Informática &amp; UI Design</title>
+  <meta name="description" content="Currículo de Ellen Lopes, estudante de Técnico de Informática com foco em design de interfaces, HTML, CSS, Python e JavaScript.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <!-- Fontes Tipográficas -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset & Variáveis para o Currículo */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-page: #0B0B10;
+      --bg-sheet: #151521;
+      --text-main: #F5F3FF;
+      --text-sub: #B7B4C8;
+      --text-muted: #7C7894;
+      --accent: #8B5CF6;
+      --accent-blue: #38BDF8;
+      --border: rgba(255, 255, 255, 0.1);
+      --font-heading: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-sub);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Barra de Ações Superior (Oculta na impressão) */
+    .action-bar {
+      width: 100%;
+      max-width: 820px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 150ms ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-back {
+      background: #1F1F30;
+      color: var(--text-main);
+      border-color: var(--border);
+    }
+
+    .btn-back:hover {
+      background: #28283E;
+      border-color: var(--accent);
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, #8B5CF6 0%, #38BDF8 100%);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+    }
+
+    .btn-print:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+    }
+
+    /* Folha A4 do Currículo */
+    .sheet {
+      width: 100%;
+      max-width: 820px;
+      background-color: var(--bg-sheet);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 3rem 3.5rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Cabeçalho do Currículo */
+    .cv-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1.75rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .cv-name {
+      font-family: var(--font-heading);
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+
+    .cv-role {
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    .cv-contacts {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .cv-contacts a {
+      color: var(--text-sub);
+      text-decoration: none;
+      transition: color 150ms ease;
+    }
+
+    .cv-contacts a:hover {
+      color: var(--accent);
+    }
+
+    /* Seções do Currículo */
+    .cv-section {
+      margin-bottom: 2rem;
+    }
+
+    .cv-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-section-title {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .cv-section-title::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .cv-item {
+      margin-bottom: 1.25rem;
+    }
+
+    .cv-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.25rem;
+    }
+
+    .cv-item-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .cv-item-date {
+      font-size: 0.85rem;
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    .cv-item-sub {
+      font-size: 0.95rem;
+      color: var(--text-sub);
+      margin-bottom: 0.35rem;
+    }
+
+    .cv-item-desc {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      line-height: 1.5;
+    }
+
+    /* Grade de Competências */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .skill-block {
+      background: #181827;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.9rem 1.1rem;
+    }
+
+    .skill-block-title {
+      font-family: var(--font-heading);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .skill-block-text {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+    }
+
+    /* =========================================================================
+       ESTILOS DE IMPRESSÃO (Folha A4 / Salvar como PDF)
+       ========================================================================= */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #1F1F2E !important;
+        padding: 0 !important;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .sheet {
+        background: #FFFFFF !important;
+        color: #1F1F2E !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 1.5cm 1.5cm !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+
+      .cv-name, .cv-item-title, .skill-block-title, .cv-section-title {
+        color: #000000 !important;
+      }
+
+      .cv-role, .cv-item-date {
+        color: #5B21B6 !important;
+      }
+
+      .cv-contacts a, .cv-item-sub, .cv-item-desc, .skill-block-text, p {
+        color: #333344 !important;
+      }
+
+      .cv-header, .cv-section-title {
+        border-color: #D1D5DB !important;
+      }
+
+      .cv-section-title::before {
+        background: #5B21B6 !important;
+      }
+
+      .skill-block {
+        background: #F9FAFB !important;
+        border-color: #E5E7EB !important;
+      }
+
+      @page {
+        margin: 1cm;
+        size: A4 portrait;
+      }
+    }
+
+    /* Responsividade em Telas Pequenas */
+    @media (max-width: 640px) {
+      .sheet {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .cv-name {
+        font-size: 1.85rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Ações (Voltar, Baixar e Imprimir) -->
+  <header class="action-bar" role="banner">
+    <a href="./index.html" class="btn btn-back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span>Voltar ao Portfólio</span>
+    </a>
+
+    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+      <a href="./curriculum.pdf" download="Curriculo-Ellen-Lopes.pdf" class="btn btn-back" title="Baixar arquivo PDF direto">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>Baixar PDF</span>
+      </a>
+
+      <button type="button" class="btn btn-print" onclick="window.print()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        <span>Imprimir ou Salvar em PDF</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Folha Principal do Currículo -->
+  <main class="sheet" id="curriculo-a4">
+    <!-- Cabeçalho com Identificação Real -->
+    <header class="cv-header">
+      <div>
+        <h1 class="cv-name">Ellen Lopes</h1>
+        <p class="cv-role">Estudante de Técnico em Informática &amp; UI Design</p>
+      </div>
+
+      <ul class="cv-contacts" aria-label="Informações de contato">
+        <li><strong>Idade:</strong> 18 anos</li>
+        <li><strong>E-mail:</strong> <a href="mailto:ellenlopesdesouza899@gmail.com">ellenlopesdesouza899@gmail.com</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/lopes37451?tab=repositories" target="_blank" rel="noopener noreferrer">github.com/lopes37451</a></li>
+        <li><strong>Localização:</strong> Brasil</li>
+      </ul>
+    </header>
+
+    <!-- Resumo / Perfil -->
+    <section class="cv-section" aria-labelledby="cv-profile-title">
+      <h2 class="cv-section-title" id="cv-profile-title">Apresentação</h2>
+      <p style="font-size: 0.95rem; line-height: 1.6;">
+        Sou estudante do ensino médio e do curso Técnico de Informática, com grande afinidade pela área de design de interfaces e pelo desenvolvimento de experiências visuais bonitas, criativas e funcionais. Meu objetivo é apresentar meus projetos escolares e acadêmicos, demonstrando minha criatividade e meus conhecimentos práticos em tecnologia.
+      </p>
+    </section>
+
+    <!-- Formação Acadêmica Real -->
+    <section class="cv-section" aria-labelledby="cv-education-title">
+      <h2 class="cv-section-title" id="cv-education-title">Formação Acadêmica</h2>
+      
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <h3 class="cv-item-title">Ensino Médio e Técnico em Informática</h3>
+          <span class="cv-item-date">Em andamento</span>
+        </div>
+        <p class="cv-item-sub">Formação integrada regular</p>
+        <p class="cv-item-desc">
+          Formação voltada a fundamentos de desenvolvimento de sistemas, lógica computacional, banco de dados, redes e desenvolvimento de páginas para a internet.
+        </p>
+      </div>
+    </section>
+
+    <!-- Tecnologias e Áreas de Estudo -->
+    <section class="cv-section" aria-labelledby="cv-skills-title">
+      <h2 class="cv-section-title" id="cv-skills-title">Tecnologias &amp; Conhecimentos de Estudo</h2>
+      
+      <div class="skills-grid">
+        <div class="skill-block">
+          <h3 class="skill-block-title">HTML5 &amp; CSS3</h3>
+          <p class="skill-block-text">Semântica estrutural, CSS Grid, Flexbox, custom properties, layout responsivo e acessibilidade.</p>
+        </div>
+
+        <div class="skill-block">
+          <h3 class="skill-block-title">JavaScript (Vanilla)</h3>
+          <p class="skill-block-text">Manipulação do DOM, interatividade na interface, tratamento de eventos e validações no navegador.</p>
+        </div>
+
+        <div class="skill-block">
+          <h3 class="skill-block-title">Python</h3>
+          <p class="skill-block-text">Fundamentos da linguagem, lógica algorítmica, estruturas de repetição e resolução de problemas escolares.</p>
+        </div>
+
+        <div class="skill-block">
+          <h3 class="skill-block-title">Design de Interfaces (UI)</h3>
+          <p class="skill-block-text">Apreço por tipografia, diagramação visual de telas, paletas de cores, contraste e organização de fluxos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos Escolares e Acadêmicos (Sem dados inventados) -->
+    <section class="cv-section" aria-labelledby="cv-projects-title">
+      <h2 class="cv-section-title" id="cv-projects-title">Projetos Escolares &amp; Acadêmicos</h2>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <h3 class="cv-item-title">E-commerce de Roupas Infantis (Projeto de Loja Virtual)</h3>
+          <span class="cv-item-date">Em Desenvolvimento</span>
+        </div>
+        <p class="cv-item-sub">Projeto escolar de desenvolvimento front-end e interface</p>
+        <p class="cv-item-desc">
+          Concepção visual de uma loja virtual para moda infantil, englobando a interface para o catálogo de produtos e telas para o módulo administrativo de cadastro de itens. Foco na usabilidade e ambientação amigável para compras em família.
+        </p>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <h3 class="cv-item-title">Repositórios de Código e Laboratórios</h3>
+          <span class="cv-item-date">Ativo</span>
+        </div>
+        <p class="cv-item-sub">Exercícios práticos públicos no GitHub</p>
+        <p class="cv-item-desc">
+          Repositório central reunindo exercícios práticos em Python, tarefas escolares de desenvolvimento web e experimentos de front-end com HTML e CSS puros.
+        </p>
+      </div>
+    </section>
+
+    <!-- Idiomas / Outras Informações -->
+    <section class="cv-section" aria-labelledby="cv-other-title">
+      <h2 class="cv-section-title" id="cv-other-title">Idiomas &amp; Informações Adicionais</h2>
+      <ul style="padding-left: 1.25rem; font-size: 0.9rem; line-height: 1.6;">
+        <li><strong>Idiomas:</strong> Português (Nativo) e <strong>Inglês (Nível Intermediário)</strong>.</li>
+        <li><strong>Área de Maior Interesse:</strong> Design de interfaces e criação visual para sites (UI Design, desenvolvimento front-end e estética web).</li>
+        <li><strong>Objetivo:</strong> Apresentar projetos escolares e acadêmicos, unindo criatividade visual, organização de layout e tecnologia web.</li>
+        <li><strong>Disponibilidade:</strong> Estudante do Ensino Médio integrado ao Técnico de Informática.</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>

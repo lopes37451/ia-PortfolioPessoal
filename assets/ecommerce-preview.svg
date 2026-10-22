@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="ecomGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1F1F30"/>
+      <stop offset="100%" stop-color="#151521"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Container Box -->
+  <rect width="600" height="360" rx="16" fill="#12121B" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+
+  <!-- Top App Navigation Bar -->
+  <rect x="0" y="0" width="600" height="48" rx="16" fill="#181826"/>
+  <rect x="0" y="32" width="600" height="16" fill="#181826"/>
+  <circle cx="28" cy="24" r="5" fill="#EF4444" fill-opacity="0.8"/>
+  <circle cx="44" cy="24" r="5" fill="#F59E0B" fill-opacity="0.8"/>
+  <circle cx="60" cy="24" r="5" fill="#10B981" fill-opacity="0.8"/>
+
+  <!-- Brand Title Mockup -->
+  <text x="90" y="29" font-family="'Space Grotesk', sans-serif" font-size="13" font-weight="700" fill="#F5F3FF" letter-spacing="0.5">MINI MODA // LOJA INFANTIL</text>
+  
+  <!-- Status Badge in Nav -->
+  <rect x="420" y="12" width="156" height="24" rx="12" fill="#8B5CF6" fill-opacity="0.15" stroke="#8B5CF6" stroke-width="1"/>
+  <circle cx="434" cy="24" r="3.5" fill="#8B5CF6"/>
+  <text x="446" y="28" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#8B5CF6">ESCOPO DE PROJETO</text>
+
+  <!-- Left Sidebar: Admin Module Mockup ("Área Administrativa") -->
+  <g transform="translate(24, 70)">
+    <rect width="160" height="264" rx="12" fill="#181828" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+    <text x="16" y="28" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#38BDF8">PAINEL ADMIN</text>
+    <rect x="16" y="38" width="128" height="1" fill="rgba(255,255,255,0.08)"/>
+
+    <!-- Sidebar Menu Items -->
+    <rect x="12" y="52" width="136" height="28" rx="6" fill="#8B5CF6" fill-opacity="0.2"/>
+    <text x="24" y="70" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="#F5F3FF">+ Cadastro Produtos</text>
+
+    <text x="24" y="106" font-family="'Inter', sans-serif" font-size="10" fill="#B7B4C8">Estoque Infantil</text>
+    <text x="24" y="136" font-family="'Inter', sans-serif" font-size="10" fill="#B7B4C8">Categorias &amp; Idades</text>
+    <text x="24" y="166" font-family="'Inter', sans-serif" font-size="10" fill="#B7B4C8">Configurações UI</text>
+
+    <!-- Mini Admin Form Simulation -->
+    <g transform="translate(12, 192)">
+      <rect width="136" height="60" rx="8" fill="#12121C" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <text x="10" y="18" font-family="'Inter', sans-serif" font-size="9" fill="#7C7894">Nome do Item</text>
+      <rect x="10" y="24" width="116" height="12" rx="3" fill="#252538"/>
+      <rect x="10" y="42" width="60" height="10" rx="3" fill="#8B5CF6"/>
+    </g>
+  </g>
+
+  <!-- Right Area: Storefront Showcase (Catálogo de Roupas Infantis) -->
+  <g transform="translate(204, 70)">
+    <!-- Header Filter / Title -->
+    <text x="0" y="20" font-family="'Space Grotesk', sans-serif" font-size="14" font-weight="700" fill="#F5F3FF">Catálogo de Produtos // Vitrine</text>
+    <text x="0" y="36" font-family="'Inter', sans-serif" font-size="10" fill="#B7B4C8">Interface voltada para experiência de navegação e compra infantil</text>
+
+    <!-- Product Card 1 -->
+    <g transform="translate(0, 52)">
+      <rect width="180" height="212" rx="10" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <!-- Product Image Placeholder: Stylized Kids T-Shirt Icon -->
+      <rect x="12" y="12" width="156" height="108" rx="8" fill="#12121B"/>
+      <!-- Stylized Shirt Path -->
+      <path d="M 66 36 L 80 44 C 84 46 96 46 100 44 L 114 36 L 128 52 L 118 62 L 112 56 V 96 H 68 V 56 L 62 62 L 52 52 Z" fill="#8B5CF6" fill-opacity="0.8"/>
+      <circle cx="90" cy="68" r="4" fill="#38BDF8"/>
+      <text x="12" y="142" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F3FF">Camiseta Algodão Orgânico</text>
+      <text x="12" y="158" font-family="'Inter', sans-serif" font-size="9.5" fill="#7C7894">Tamanhos: 02 a 08 anos</text>
+      <text x="12" y="182" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#38BDF8">R$ 49,90</text>
+      <!-- Add to Cart Pill -->
+      <rect x="134" y="168" width="34" height="24" rx="6" fill="#8B5CF6"/>
+      <path d="M 148 177 L 151 183 L 157 175" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Product Card 2 -->
+    <g transform="translate(196, 52)">
+      <rect width="180" height="212" rx="10" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+      <!-- Product Image Placeholder: Stylized Kids Jumpsuit / Macacão -->
+      <rect x="12" y="12" width="156" height="108" rx="8" fill="#12121B"/>
+      <!-- Stylized Jumpsuit -->
+      <path d="M 72 38 H 108 V 54 H 116 V 82 H 104 V 98 H 94 V 86 H 86 V 98 H 76 V 82 H 64 V 54 H 72 Z" fill="#38BDF8" fill-opacity="0.8"/>
+      <circle cx="82" cy="62" r="2.5" fill="#F5F3FF"/>
+      <circle cx="98" cy="62" r="2.5" fill="#F5F3FF"/>
+      <text x="12" y="142" font-family="'Space Grotesk', sans-serif" font-size="11" font-weight="700" fill="#F5F3FF">Macacão Conforto Linho</text>
+      <text x="12" y="158" font-family="'Inter', sans-serif" font-size="9.5" fill="#7C7894">Tamanhos: 01 a 04 anos</text>
+      <text x="12" y="182" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="700" fill="#38BDF8">R$ 79,90</text>
+      <!-- Add to Cart Pill -->
+      <rect x="134" y="168" width="34" height="24" rx="6" fill="#8B5CF6"/>
+      <path d="M 148 177 L 151 183 L 157 175" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+</svg>

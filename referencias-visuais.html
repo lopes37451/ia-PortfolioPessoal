@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Referências Visuais — Portfólio Ellen Lopes</title>
+  <meta name="description" content="Documento de referências visuais reais verificadas do Awwwards e SiteInspire que fundamentaram o projeto de Ellen Lopes.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0B0B10;
+      --sheet: #151521;
+      --text-main: #F5F3FF;
+      --text-sub: #B7B4C8;
+      --text-muted: #7C7894;
+      --purple: #8B5CF6;
+      --blue: #38BDF8;
+      --border: rgba(255, 255, 255, 0.08);
+      --font-heading: 'Space Grotesk', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-sub);
+      font-family: var(--font-body);
+      line-height: 1.45;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Barra Superior */
+    .action-bar {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 150ms ease;
+    }
+
+    .btn-back {
+      background: #1F1F30;
+      color: var(--text-main);
+      border-color: var(--border);
+    }
+
+    .btn-back:hover {
+      background: #2A2A42;
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, #8B5CF6 0%, #38BDF8 100%);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(139, 92, 246, 0.3);
+    }
+
+    .btn-print:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Folha A4 Exata */
+    .a4-sheet {
+      width: 100%;
+      max-width: 900px;
+      background: var(--sheet);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.25rem 2.75rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Header do Documento */
+    .doc-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 1rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+    }
+
+    .doc-title {
+      font-family: var(--font-heading);
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.15;
+    }
+
+    .doc-subtitle {
+      font-size: 0.85rem;
+      color: var(--blue);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .doc-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    /* Grid de Referências (2x2) */
+    .refs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .ref-card {
+      background: #191928;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .ref-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .ref-name {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .ref-badge {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 9999px;
+      background: rgba(139, 92, 246, 0.15);
+      color: var(--purple);
+      font-weight: 600;
+    }
+
+    .ref-url {
+      font-size: 0.75rem;
+      color: var(--blue);
+      font-family: monospace;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .ref-body {
+      font-size: 0.78rem;
+      line-height: 1.4;
+      color: var(--text-sub);
+    }
+
+    .ref-body strong {
+      color: var(--text-main);
+    }
+
+    /* Seção da Paleta e Tipografia */
+    .palette-section {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding: 0.9rem 1rem;
+      background: #191928;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .palette-swatches {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .swatch-item {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .swatch-color {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .swatch-info {
+      font-size: 0.72rem;
+      font-family: monospace;
+      line-height: 1.1;
+    }
+
+    .swatch-name {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .typography-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.25rem;
+      border-left: 1px solid var(--border);
+      padding-left: 1rem;
+      font-size: 0.78rem;
+    }
+
+    .typography-info strong {
+      color: var(--text-main);
+    }
+
+    /* Conclusão */
+    .conclusion-box {
+      border-left: 3px solid var(--purple);
+      background: rgba(139, 92, 246, 0.08);
+      padding: 0.85rem 1.1rem;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.82rem;
+      line-height: 1.45;
+    }
+
+    .conclusion-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
+    }
+
+    /* Nota Como Salvar em PDF */
+    .pdf-help-note {
+      margin-top: 1.25rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* =========================================================================
+       REGRAS DE IMPRESSÃO A4 (1 PÁGINA)
+       ========================================================================= */
+    @media print {
+      body {
+        background: #FFFFFF !important;
+        color: #1F1F2E !important;
+        padding: 0 !important;
+      }
+
+      .action-bar, .pdf-help-note {
+        display: none !important;
+      }
+
+      .a4-sheet {
+        background: #FFFFFF !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0.8cm 1cm !important;
+        max-width: 100% !important;
+      }
+
+      .doc-title, .ref-name, .swatch-name, .conclusion-title, strong {
+        color: #000000 !important;
+      }
+
+      .doc-subtitle, .ref-url {
+        color: #5B21B6 !important;
+      }
+
+      .doc-header {
+        border-color: #D1D5DB !important;
+      }
+
+      .ref-card, .palette-section {
+        background: #F9FAFB !important;
+        border-color: #E5E7EB !important;
+      }
+
+      .ref-badge {
+        background: #EDE9FE !important;
+        color: #5B21B6 !important;
+      }
+
+      .conclusion-box {
+        background: #F5F3FF !important;
+        border-left-color: #7C3AED !important;
+      }
+
+      .swatch-color {
+        border-color: #9CA3AF !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 0.8cm;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .refs-grid {
+        grid-template-columns: 1fr;
+      }
+      .palette-section {
+        grid-template-columns: 1fr;
+      }
+      .typography-info {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Ações do Documento -->
+  <header class="action-bar" role="banner">
+    <a href="./index.html" class="btn btn-back">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="19" y1="12" x2="5" y2="12"></line>
+        <polyline points="12 19 5 12 12 5"></polyline>
+      </svg>
+      <span>Voltar ao Portfólio</span>
+    </a>
+
+    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+      <a href="./referencias-visuais.pdf" download="Referencias-Visuais-Ellen-Lopes.pdf" class="btn btn-back" title="Baixar arquivo PDF">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span>Baixar PDF</span>
+      </a>
+
+      <button type="button" class="btn btn-print" onclick="window.print()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        <span>Imprimir ou Salvar em PDF (A4)</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Folha A4 do Documento de Referências -->
+  <main class="a4-sheet" id="referencias-a4">
+    <!-- Cabeçalho -->
+    <header class="doc-header">
+      <div>
+        <span class="doc-subtitle">Direção de Arte &amp; Pesquisa Visual</span>
+        <h1 class="doc-title">Painel de Referências Visuais</h1>
+      </div>
+      <div class="doc-meta">
+        <strong>Ellen Lopes</strong><br>
+        Portfólio Pessoal Autoral • 2026
+      </div>
+    </header>
+
+    <!-- As 4 Referências Reais Verificadas -->
+    <section class="refs-grid" aria-label="Referências reais analisadas">
+      <!-- Ref 1: Dennis Snellenberg -->
+      <article class="ref-card">
+        <div class="ref-header">
+          <h2 class="ref-name">01. Dennis Snellenberg</h2>
+          <span class="ref-badge">Awwwards SOTD</span>
+        </div>
+        <a href="https://dennissnellenberg.com/" class="ref-url" target="_blank" rel="noopener noreferrer">dennissnellenberg.com</a>
+        <p class="ref-body">
+          <strong>Aproveitar:</strong> Tipografia brutalista refinada, escala de contrastes e microinterações táteis nos botões.<br>
+          <strong>Descartar:</strong> WebGL 3D pesado e cursor customizado que afeta acessibilidade.<br>
+          <strong>Adaptação:</strong> Títulos marcantes em Space Grotesk e cartões assimétricos com CSS puro.
+        </p>
+      </article>
+
+      <!-- Ref 2: Brittany Chiang -->
+      <article class="ref-card">
+        <div class="ref-header">
+          <h2 class="ref-name">02. Brittany Chiang</h2>
+          <span class="ref-badge">Referência A11y</span>
+        </div>
+        <a href="https://brittanychiang.com/" class="ref-url" target="_blank" rel="noopener noreferrer">brittanychiang.com</a>
+        <p class="ref-body">
+          <strong>Aproveitar:</strong> Navegação fixa com indicador de seção ativa (scrollspy), badges de tags e foco por teclado exemplar.<br>
+          <strong>Descartar:</strong> Layout estritamente monocromático e focado só em engenharia.<br>
+          <strong>Adaptação:</strong> Header fixo com glassmorphism e acentos vibrantes de design UI.
+        </p>
+      </article>
+
+      <!-- Ref 3: Zhenya Rynzhuk -->
+      <article class="ref-card">
+        <div class="ref-header">
+          <h2 class="ref-name">03. Zhenya Rynzhuk</h2>
+          <span class="ref-badge">Awwwards SOTY</span>
+        </div>
+        <a href="https://zhenyary.com/" class="ref-url" target="_blank" rel="noopener noreferrer">zhenyary.com</a>
+        <p class="ref-body">
+          <strong>Aproveitar:</strong> Diagramação editorial, linhas finas de divisão, numeração progressiva de seções (01, 02) e respiro.<br>
+          <strong>Descartar:</strong> Telas de pré-carregamento demoradas e fotos de moda conceituais.<br>
+          <strong>Adaptação:</strong> Grid técnico e ilustrações vetoriais SVG de fundamentos de interface.
+        </p>
+      </article>
+
+      <!-- Ref 4: Rauno Freiberg -->
+      <article class="ref-card">
+        <div class="ref-header">
+          <h2 class="ref-name">04. Rauno Freiberg</h2>
+          <span class="ref-badge">Vercel Design</span>
+        </div>
+        <a href="https://rauno.me/" class="ref-url" target="_blank" rel="noopener noreferrer">rauno.me</a>
+        <p class="ref-body">
+          <strong>Aproveitar:</strong> Alternância suave de tema claro/escuro, transições táteis (&lt;100ms) e respeito a movimento reduzido.<br>
+          <strong>Descartar:</strong> Metáfora de sistema operacional (dock/janelas flutuantes).<br>
+          <strong>Adaptação:</strong> Alternador de tema acessível com persistência e feedback tátil em botões.
+        </p>
+      </article>
+    </section>
+
+    <!-- Paleta de Cores e Tipografia -->
+    <section class="palette-section" aria-label="Identidade cromática e tipográfica">
+      <div>
+        <strong style="display: block; font-size: 0.82rem; margin-bottom: 0.4rem; color: var(--text-main);">Paleta de Cores Implementada</strong>
+        <div class="palette-swatches">
+          <div class="swatch-item">
+            <span class="swatch-color" style="background: #0B0B10;"></span>
+            <div class="swatch-info"><span class="swatch-name">#0B0B10</span><br>Fundo Dark</div>
+          </div>
+          <div class="swatch-item">
+            <span class="swatch-color" style="background: #151521;"></span>
+            <div class="swatch-info"><span class="swatch-name">#151521</span><br>Superfície</div>
+          </div>
+          <div class="swatch-item">
+            <span class="swatch-color" style="background: #8B5CF6;"></span>
+            <div class="swatch-info"><span class="swatch-name">#8B5CF6</span><br>Roxo Acento</div>
+          </div>
+          <div class="swatch-item">
+            <span class="swatch-color" style="background: #38BDF8;"></span>
+            <div class="swatch-info"><span class="swatch-name">#38BDF8</span><br>Azul Acento</div>
+          </div>
+          <div class="swatch-item">
+            <span class="swatch-color" style="background: #F7F7FC;"></span>
+            <div class="swatch-info"><span class="swatch-name">#F7F7FC</span><br>Fundo Light</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="typography-info">
+        <div><strong>Títulos:</strong> Space Grotesk (geométrica e tecnológica)</div>
+        <div><strong>Corpo:</strong> Inter (alta legibilidade em telas)</div>
+        <div><strong>Código:</strong> JetBrains Mono (precisão técnica)</div>
+      </div>
+    </section>
+
+    <!-- Conclusão Sintética -->
+    <section class="conclusion-box" aria-labelledby="concl-title">
+      <h2 class="conclusion-title" id="concl-title">Conclusão: Impacto no Portfólio de Ellen Lopes</h2>
+      <p>
+        As referências demonstraram que um portfólio autoral de alto impacto não depende de frameworks pesados ou bibliotecas intrusivas. O equilíbrio entre a <em>precisão tipográfica de Dennis Snellenberg</em>, o <em>rigor de acessibilidade de Brittany Chiang</em>, a <em>diagramação editorial de Zhenya Rynzhuk</em> e o <em>acabamento tátil de Rauno Freiberg</em> permitiu criar uma presença digital madura, honesta e perfeitamente ajustada ao perfil de uma estudante de Técnico em Informática focada em design de interfaces.
+      </p>
+    </section>
+  </main>
+
+  <p class="pdf-help-note">
+    Dica: para salvar como PDF no navegador, clique em <strong>Imprimir ou Salvar em PDF</strong> (ou pressione Ctrl+P), selecione o destino <em>Salvar como PDF</em>, marque <em>Gráficos de segundo plano</em> e confirme.
+  </p>
+
+</body>
+</html>

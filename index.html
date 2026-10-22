@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Ellen Lopes — Portfólio de Design & Desenvolvimento Web</title>
+  <meta name="description" content="Portfólio de Ellen Lopes, estudante de Técnico de Informática com foco em design de interfaces, HTML, CSS, Python e JavaScript. Projetos acadêmicos e repositórios.">
+  <meta name="author" content="Ellen Lopes">
+  <meta name="theme-color" content="#0B0B10">
+
+  <!-- Open Graph / Meta de Compartilhamento -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ellen Lopes — Portfólio de Design & Desenvolvimento Web">
+  <meta property="og:description" content="Estudante de Técnico em Informática com paixão por design de interfaces digitais. Transformando ideias em experiências visuais.">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon Vetorial -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <!-- Fontes Tipográficas: Space Grotesk, Inter e JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Folha de Estilos Principal -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Link de Acessibilidade (Skip Link) para navegação rápida por teclado -->
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- =========================================================================
+       CABEÇALHO & NAVEGAÇÃO FIXA
+       ========================================================================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <!-- Logotipo Textual com Monograma Vetorial -->
+      <a href="#inicio" class="brand-logo" aria-label="Ellen Lopes - Página Inicial">
+        <span class="brand-mark" aria-hidden="true">EL</span>
+        <div class="brand-meta">
+          <span class="brand-name">Ellen Lopes</span>
+          <span class="brand-role">Estudante &amp; UI Design</span>
+        </div>
+      </a>
+
+      <!-- Menu de Navegação Desktop -->
+      <nav class="nav-desktop" aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link active" data-nav="inicio">Início</a></li>
+          <li><a href="#sobre" class="nav-link" data-nav="sobre">Sobre</a></li>
+          <li><a href="#projetos" class="nav-link" data-nav="projetos">Projetos</a></li>
+          <li><a href="#alem-do-codigo" class="nav-link" data-nav="alem-do-codigo">Além do Código</a></li>
+          <li><a href="#contato" class="nav-link" data-nav="contato">Contato</a></li>
+          <li><a href="curriculum.html" class="nav-link" style="color: var(--accent-purple);">Currículo</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações do Cabeçalho: Alternador de Tema e Menu Mobile -->
+      <div class="header-actions">
+        <!-- Alternador de Tema Claro / Escuro -->
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar para o modo claro" title="Alternar tema visual">
+          <!-- Ícone do Sol (exibido no modo escuro) -->
+          <svg class="theme-icon icon-sun" aria-hidden="true" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path>
+          </svg>
+          <!-- Ícone da Lua (exibido no modo claro) -->
+          <svg class="theme-icon icon-moon" style="display: none;" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Botão Hambúrguer Mobile -->
+        <button type="button" class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Abrir menu de navegação">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Gaveta de Navegação Mobile (Mobile Drawer) -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <nav aria-label="Navegação móvel">
+      <ul class="mobile-nav-links">
+        <li><a href="#inicio" class="mobile-nav-link" data-nav="inicio">01. Início</a></li>
+        <li><a href="#sobre" class="mobile-nav-link" data-nav="sobre">02. Sobre Mim</a></li>
+        <li><a href="#projetos" class="mobile-nav-link" data-nav="projetos">03. Projetos</a></li>
+        <li><a href="#alem-do-codigo" class="mobile-nav-link" data-nav="alem-do-codigo">04. Além do Código</a></li>
+        <li><a href="#contato" class="mobile-nav-link" data-nav="contato">05. Contato</a></li>
+        <li><a href="curriculum.html" class="mobile-nav-link" style="color: var(--accent-purple);">06. Currículo Imprimível</a></li>
+        <li><a href="referencias-visuais.html" class="mobile-nav-link">07. Referências Visuais</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <div class="badge badge-accent">
+        <span class="badge-dot"></span>
+        Ensino Médio &amp; Técnico de Informática
+      </div>
+      <a href="mailto:ellenlopesdesouza899@gmail.com" class="btn btn-secondary btn-sm">
+        ellenlopesdesouza899@gmail.com
+      </a>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       CONTEÚDO PRINCIPAL
+       ========================================================================= -->
+  <main id="main-content">
+
+    <!-- -----------------------------------------------------------------------
+         HERO SECTION (#inicio)
+         ----------------------------------------------------------------------- -->
+    <section class="hero-section" id="inicio" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Coluna Textual do Hero -->
+          <div class="hero-content">
+            <div class="hero-meta-badge">
+              <span class="status-ping" aria-hidden="true"></span>
+              <span>Estudante de Informática // Foco em Design</span>
+            </div>
+
+            <h1 class="hero-title" id="hero-title">
+              Olá, sou <span class="gradient-text">Ellen Lopes</span>.
+            </h1>
+
+            <p class="hero-tagline">
+              Estudante do curso Técnico de Informática e entusiasta do design visual. 
+              Transformando ideias em experiências digitais claras, funcionais e esteticamente organizadas.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projetos" class="btn btn-primary">
+                <span>Explorar Projetos</span>
+                <svg class="btn-icon" aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M7 17L17 7M17 7H7M17 7V17"></path>
+                </svg>
+              </a>
+              <a href="#contato" class="btn btn-secondary">
+                <span>Entrar em Contato</span>
+              </a>
+              <a href="curriculum.html" class="btn btn-ghost" title="Acessar versão do currículo pronta para imprimir ou salvar em PDF">
+                <svg class="btn-icon" aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+                <span>Currículo</span>
+              </a>
+            </div>
+
+            <div class="hero-credentials">
+              <div class="credential-item">
+                <span class="credential-label">Idade</span>
+                <span class="credential-value">18 anos</span>
+              </div>
+              <div class="credential-item">
+                <span class="credential-label">Formação</span>
+                <span class="credential-value">Técnico em Informática</span>
+              </div>
+              <div class="credential-item">
+                <span class="credential-label">Interesse</span>
+                <span class="credential-value">Design UI &amp; Web</span>
+              </div>
+              <div class="credential-item">
+                <span class="credential-label">Foco Atual</span>
+                <span class="credential-value">Projetos Escolares</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coluna Gráfica Vetorial Autoral (Sem fotos pessoais ou de banco) -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-visual-container" role="img" aria-label="Composição gráfica abstrata com grid técnico, janelas de interface e gradientes em roxo e azul">
+              <object type="image/svg+xml" data="./assets/hero-graphic.svg" width="540" height="440" style="pointer-events: none;">
+                Composição abstrata representativa de interfaces visuais.
+              </object>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SEÇÃO SOBRE MIM (#sobre)
+         ----------------------------------------------------------------------- -->
+    <section class="section-wrapper" id="sobre" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-counter">01. Trajetória &amp; Foco</span>
+          <h2 class="section-title" id="about-title">Criando interfaces visuais com clareza</h2>
+          <p class="section-lead">
+            A união entre a estrutura lógica da informática e a sensibilidade do design gráfico para a web.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Coluna de Apresentação -->
+          <div class="about-text-column reveal">
+            <p>
+              Meu nome é <strong>Ellen Lopes</strong>, tenho 18 anos e sou estudante do ensino médio e do curso <strong>Técnico de Informática</strong>. Gosto especialmente da parte de design e tenho grande interesse em criar interfaces bonitas, criativas e funcionais.
+            </p>
+            <p>
+              Meu objetivo é apresentar meus projetos escolares e acadêmicos e mostrar minha criatividade e meus conhecimentos em tecnologia, transformando ideias em experiências visuais que façam sentido para quem as utiliza.
+            </p>
+            
+            <div class="about-highlight-box">
+              <h3>Área de Maior Interesse</h3>
+              <p>
+                <strong>Design de interfaces e criação visual para sites:</strong> unindo harmonia estética, hierarquia tipográfica, contraste acessível e código limpo para construir layouts modernos e intuitivos.
+              </p>
+            </div>
+
+            <!-- Idioma em Destaque -->
+            <div class="language-badge-card" style="margin-top: 1.25rem;">
+              <div class="language-badge-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--accent-blue);">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <span style="font-family: var(--font-heading); font-weight: 700; color: var(--text-primary);">Idiomas</span>
+              </div>
+              <p style="margin: 0.5rem 0 0; font-size: 0.95rem;">
+                Português (nativo) • <strong style="color: var(--accent-blue);">Inglês: nível intermediário</strong> (leitura técnica, documentação e comunicação).
+              </p>
+            </div>
+          </div>
+
+          <!-- Coluna de Tecnologias de Estudo (Sem níveis inventados) -->
+          <div class="about-tech-column reveal">
+            <div class="tech-stack-card">
+              <h3 class="tech-stack-title">
+                <span>Tecnologias de Estudo</span>
+                <span class="badge badge-cyan">Em Aprendizado Prático</span>
+              </h3>
+
+              <div class="tech-grid">
+                <!-- HTML -->
+                <div class="tech-item">
+                  <div class="tech-item-header">
+                    <span class="tech-item-name">HTML5</span>
+                    <span class="tech-item-category">Estrutura</span>
+                  </div>
+                  <p class="tech-item-desc">
+                    Semântica web, acessibilidade estrutural, organização de marcos e formulários.
+                  </p>
+                </div>
+
+                <!-- CSS -->
+                <div class="tech-item">
+                  <div class="tech-item-header">
+                    <span class="tech-item-name">CSS3</span>
+                    <span class="tech-item-category">Estilo &amp; UI</span>
+                  </div>
+                  <p class="tech-item-desc">
+                    Flexbox, CSS Grid, custom properties (tokens), temas visuais e design responsivo.
+                  </p>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="tech-item">
+                  <div class="tech-item-header">
+                    <span class="tech-item-name">JavaScript</span>
+                    <span class="tech-item-category">Interação</span>
+                  </div>
+                  <p class="tech-item-desc">
+                    Lógica fundamental no navegador, manipulação de DOM, eventos e validações de tela.
+                  </p>
+                </div>
+
+                <!-- Python -->
+                <div class="tech-item">
+                  <div class="tech-item-header">
+                    <span class="tech-item-name">Python</span>
+                    <span class="tech-item-category">Algoritmos</span>
+                  </div>
+                  <p class="tech-item-desc">
+                    Lógica de programação, estruturas de dados fundamentais e exercícios técnicos escolares.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SEÇÃO DE PROJETOS (#projetos)
+         ----------------------------------------------------------------------- -->
+    <section class="section-wrapper" id="projetos" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-counter">02. Trabalhos &amp; Estudos</span>
+          <h2 class="section-title" id="projects-title">Projetos acadêmicos e repositórios</h2>
+          <p class="section-lead">
+            Apresentação honesta e transparente de projetos escolares desenvolvidos e códigos disponíveis no GitHub.
+          </p>
+        </div>
+
+        <div class="projects-editorial-grid">
+
+          <!-- CARD PRINCIPAL EM DESTAQUE: E-COMMERCE DE ROUPAS INFANTIS -->
+          <article class="project-featured-card reveal" aria-labelledby="featured-project-title">
+            <div class="featured-card-grid">
+              <!-- Visual Esquemático do Projeto -->
+              <div class="featured-visual-pane">
+                <div class="featured-visual-container" role="img" aria-label="Interface esquemática do e-commerce de roupas infantis com catálogo e painel administrativo">
+                  <object type="image/svg+xml" data="./assets/ecommerce-preview.svg" width="600" height="360" style="pointer-events: none;">
+                    Esquema visual do e-commerce de roupas infantis.
+                  </object>
+                </div>
+              </div>
+
+              <!-- Conteúdo Descritivo Fiel ao Escopo -->
+              <div class="featured-content-pane">
+                <div class="project-meta-row">
+                  <span class="badge badge-accent">
+                    <span class="badge-dot"></span>
+                    Projeto Principal
+                  </span>
+                  <span class="badge badge-cyan">
+                    Status: Em Desenvolvimento
+                  </span>
+                </div>
+
+                <h3 class="project-card-title" id="featured-project-title">
+                  E-commerce de Roupas Infantis
+                </h3>
+
+                <p class="project-card-desc">
+                  Projeto de desenvolvimento de uma loja virtual infantil, com interface visual para catálogo de produtos e área administrativa voltada ao cadastro de novos itens. O foco principal é a organização visual do catálogo e a facilidade de navegação para famílias e compradores.
+                </p>
+
+                <ul class="project-specs-list" aria-label="Escopo específico do projeto">
+                  <li class="project-spec-item">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Vitrine de Produtos:</strong> Diagramação de catálogo com tamanhos, valores e foco visual infantil.</span>
+                  </li>
+                  <li class="project-spec-item">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Área Administrativa:</strong> Telas planejadas para formulários de cadastro e estoque de produtos.</span>
+                  </li>
+                  <li class="project-spec-item">
+                    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span><strong>Identificação:</strong> Trabalho escolar em andamento no curso Técnico em Informática.</span>
+                  </li>
+                </ul>
+
+                <div class="project-tags-row">
+                  <span class="badge">HTML5</span>
+                  <span class="badge">CSS3</span>
+                  <span class="badge">JavaScript</span>
+                  <span class="badge">UI Design</span>
+                  <span class="badge">Escopo Acadêmico</span>
+                </div>
+
+                <div class="project-actions-row">
+                  <span class="btn btn-secondary btn-sm" style="cursor: default;" title="Projeto atualmente em fase de desenvolvimento escolar">
+                    <svg class="btn-icon" aria-hidden="true" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>Em Desenvolvimento</span>
+                  </span>
+                  <a href="https://github.com/lopes37451?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                    <span>Acompanhar no GitHub</span>
+                    <svg class="btn-icon" aria-hidden="true" viewBox="0 0 24 24">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- SUBGRADE DE PROJETOS E REPOSITÓRIOS -->
+          <div class="projects-subgrid">
+
+            <!-- Card 2: GitHub Central Oficial -->
+            <article class="project-subcard reveal" aria-labelledby="github-card-title">
+              <div>
+                <div class="project-meta-row" style="margin-bottom: 1rem;">
+                  <span class="badge badge-accent">Repositório Oficial</span>
+                  <span class="badge">Acesso Público</span>
+                </div>
+
+                <div class="subcard-content">
+                  <h3 id="github-card-title">Repositórios de Código no GitHub</h3>
+                  <p>
+                    Acesso direto ao meu perfil verificado no GitHub contendo os códigos dos meus estudos em sala de aula, exercícios técnicos em Python, laboratórios de HTML/CSS e lógica com JavaScript.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div class="project-tags-row" style="margin-bottom: 1.25rem;">
+                  <span class="badge">Python</span>
+                  <span class="badge">JavaScript</span>
+                  <span class="badge">HTML &amp; CSS</span>
+                  <span class="badge">Exercícios Escolares</span>
+                </div>
+
+                <a href="https://github.com/lopes37451?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%;">
+                  <span>Explorar Repositórios Verificados</span>
+                  <svg class="btn-icon" aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 3: Estudos de Fundamentos e Interfaces -->
+            <article class="project-subcard reveal" aria-labelledby="studies-card-title">
+              <div>
+                <div class="project-meta-row" style="margin-bottom: 1rem;">
+                  <span class="badge badge-cyan">Estudo Conceitual</span>
+                  <span class="badge">Prática Front-End</span>
+                </div>
+
+                <div class="subcard-content">
+                  <h3 id="studies-card-title">Estudos de Diagramação e Interfaces</h3>
+                  <p>
+                    Exercícios de prática independente com foco em alinhamento visual, grids assimétricos, acessibilidade com foco visível e respeito a preferências de movimento reduzido.
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <div class="subcard-visual" style="margin-bottom: 1.25rem;">
+                  <object type="image/svg+xml" data="./assets/code-studies.svg" width="600" height="360" style="pointer-events: none;">
+                    Estudos de código e arquitetura de interfaces.
+                  </object>
+                </div>
+
+                <div class="project-tags-row">
+                  <span class="badge">CSS Grid</span>
+                  <span class="badge">Semântica</span>
+                  <span class="badge">Acessibilidade WCAG</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SEÇÃO ALÉM DO CÓDIGO (#alem-do-codigo)
+         ----------------------------------------------------------------------- -->
+    <section class="section-wrapper" id="alem-do-codigo" aria-labelledby="beyond-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-counter">03. Minha Personalidade</span>
+          <h2 class="section-title" id="beyond-title">Além do código &amp; das telas</h2>
+          <p class="section-lead">
+            O design e a tecnologia são minhas áreas de estudo, mas minha energia e criatividade também são impulsionadas por duas grandes paixões: a música do Justin Bieber e o amor pelo Corinthians.
+          </p>
+        </div>
+
+        <div class="beyond-editorial-grid">
+
+          <!-- CARD 1: JUSTIN BIEBER -->
+          <article class="beyond-card beyond-card-bieber reveal" aria-labelledby="bieber-card-title">
+            <div class="beyond-card-visual">
+              <object type="image/svg+xml" data="./assets/justin-bieber-graphic.svg" width="540" height="320" style="pointer-events: none;">
+                Grafismo musical autoral em homenagem a Justin Bieber.
+              </object>
+            </div>
+
+            <div class="beyond-card-body">
+              <div class="beyond-meta-row">
+                <span class="badge badge-accent">
+                  <span class="badge-dot"></span>
+                  Música &amp; Inspiração
+                </span>
+                <span class="badge badge-cyan">Belieber Apaixonada</span>
+              </div>
+
+              <h3 class="beyond-card-title" id="bieber-card-title">
+                Justin Bieber
+              </h3>
+
+              <blockquote class="beyond-quote">
+                “Sou apaixonada pelo Justin Bieber! A energia e a autenticidade das músicas dele são minha trilha sonora favorita enquanto crio interfaces, organizo informações e penso em novas soluções visuais no código.”
+              </blockquote>
+
+              <p class="beyond-card-text">
+                Para mim, música e design caminham juntos: o ritmo e a harmonia sonora ajudam a manter o foco, despertam a imaginação e transformam horas de estudo e desenvolvimento em momentos leves e prazerosos.
+              </p>
+
+              <div class="beyond-tags-row">
+                <span class="badge">Trilha Sonora Diária</span>
+                <span class="badge">Vibe Criativa</span>
+                <span class="badge">Playlist no Repeat</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 2: CORINTHIANS -->
+          <article class="beyond-card beyond-card-corinthians reveal" aria-labelledby="corinthians-card-title">
+            <div class="beyond-card-visual">
+              <object type="image/svg+xml" data="./assets/corinthians-graphic.svg" width="540" height="320" style="pointer-events: none;">
+                Composição gráfica vetorial autoral em homenagem ao Corinthians.
+              </object>
+            </div>
+
+            <div class="beyond-card-body">
+              <div class="beyond-meta-row">
+                <span class="badge badge-accent">
+                  <span class="badge-dot" style="background-color: #38BDF8;"></span>
+                  Futebol &amp; Paixão
+                </span>
+                <span class="badge badge-cyan">Corinthiana de Coração</span>
+              </div>
+
+              <h3 class="beyond-card-title" id="corinthians-card-title">
+                Sport Club Corinthians Paulista
+              </h3>
+
+              <blockquote class="beyond-quote">
+                “Sou corinthiana apaixonada! Aquele sentimento incondicional pelo Timão me inspira sobre persistência, raça e entrega. É essa mesma dedicação com garra que levo para cada projeto acadêmico e linha de código.”
+              </blockquote>
+
+              <p class="beyond-card-text">
+                A cultura do Corinthians ensina a nunca desistir diante de um desafio complexo. Torcer pelo Timão traz emoção, orgulho e a certeza de que a determinação faz toda a diferença nos resultados.
+              </p>
+
+              <div class="beyond-tags-row">
+                <span class="badge">Vai Corinthians!</span>
+                <span class="badge">Raça &amp; Devoção</span>
+                <span class="badge">Orgulho Alvinegro</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- -----------------------------------------------------------------------
+         SEÇÃO DE CONTATO (#contato)
+         ----------------------------------------------------------------------- -->
+    <section class="section-wrapper" id="contato" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-counter">04. Comunicação &amp; Contato</span>
+          <h2 class="section-title" id="contact-title">Vamos conversar?</h2>
+          <p class="section-lead">
+            Entre em contato para conversas sobre design de interfaces, estudos acadêmicos ou oportunidades para estudantes.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Coluna com Canais Oficiais Verificados -->
+          <div class="contact-info-col reveal">
+            <h3>Canais Oficiais Verificados</h3>
+            <p>
+              Estou à disposição pelos canais abaixo. Como valorizo a transparência, você pode me contatar diretamente por e-mail ou explorar meus códigos no GitHub.
+            </p>
+
+            <ul class="contact-channels-list">
+              <!-- E-mail Oficial -->
+              <li class="contact-channel-item">
+                <div class="channel-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-title">E-mail Direto</span>
+                  <a href="mailto:ellenlopesdesouza899@gmail.com" class="channel-link">
+                    ellenlopesdesouza899@gmail.com
+                  </a>
+                </div>
+              </li>
+
+              <!-- GitHub Oficial -->
+              <li class="contact-channel-item">
+                <div class="channel-icon-box" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </div>
+                <div class="channel-details">
+                  <span class="channel-title">GitHub Oficial</span>
+                  <a href="https://github.com/lopes37451?tab=repositories" target="_blank" rel="noopener noreferrer" class="channel-link">
+                    github.com/lopes37451
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Nota de Transparência -->
+            <div class="contact-transparency-note">
+              <strong>Nota sobre o formulário:</strong> Este portfólio é uma página estática sem servidor backend integrado. Ao preencher os campos ao lado e clicar em enviar, o formulário valida os dados e abre seu cliente de e-mail com a mensagem devidamente preenchida e formatada para envio direto.
+            </div>
+          </div>
+
+          <!-- Coluna com o Formulário Assistido -->
+          <div class="contact-form-card reveal">
+            <h3 style="font-size: 1.35rem; margin-bottom: 1.25rem;">Enviar Mensagem</h3>
+
+            <!-- Alerta Informativo Acessível -->
+            <div id="form-alert" class="form-status-alert info" role="status" aria-live="polite"></div>
+
+            <form id="contact-form" novalidate>
+              <!-- Campo Nome -->
+              <div class="form-group">
+                <label for="user-name" class="form-label">
+                  <span>Seu Nome</span>
+                  <span class="required-indicator" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="user-name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="Ex: Maria Silva" 
+                  required 
+                  aria-describedby="name-error"
+                  autocomplete="name"
+                >
+                <span id="name-error" class="form-error-msg" aria-live="polite"></span>
+              </div>
+
+              <!-- Campo E-mail -->
+              <div class="form-group">
+                <label for="user-email" class="form-label">
+                  <span>Seu E-mail</span>
+                  <span class="required-indicator" aria-hidden="true">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="user-email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="Ex: maria@exemplo.com" 
+                  required 
+                  aria-describedby="email-error"
+                  autocomplete="email"
+                >
+                <span id="email-error" class="form-error-msg" aria-live="polite"></span>
+              </div>
+
+              <!-- Campo Mensagem -->
+              <div class="form-group">
+                <label for="user-message" class="form-label">
+                  <span>Mensagem</span>
+                  <span class="required-indicator" aria-hidden="true">*</span>
+                </label>
+                <textarea 
+                  id="user-message" 
+                  name="message" 
+                  rows="4" 
+                  class="form-textarea" 
+                  placeholder="Descreva o motivo do contato..." 
+                  required 
+                  aria-describedby="message-error"
+                ></textarea>
+                <span id="message-error" class="form-error-msg" aria-live="polite"></span>
+              </div>
+
+              <!-- Botão de Disparo -->
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg class="btn-icon" aria-hidden="true" viewBox="0 0 24 24">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Preparar Envio de E-mail</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       RODAPÉ (FOOTER)
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 0.5rem;">
+            <span class="brand-mark" aria-hidden="true">EL</span>
+            <span class="brand-name">Ellen Lopes</span>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 380px;">
+            Estudante do curso Técnico de Informática com foco em design de interfaces digitais e desenvolvimento web.
+          </p>
+        </div>
+
+        <ul class="footer-nav" aria-label="Links rápidos do rodapé">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre Mim</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a href="curriculum.html">Currículo</a></li>
+          <li><a href="referencias-visuais.html">Referências Visuais</a></li>
+          <li><a href="https://github.com/lopes37451?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ellen Lopes. Desenvolvido com HTML, CSS e JavaScript puros.</p>
+        <p>Acessibilidade WCAG 2.1 AA • Sem frameworks externos</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Modular Vanilla -->
+  <script src="./script.js"></script>
+</body>
+</html>

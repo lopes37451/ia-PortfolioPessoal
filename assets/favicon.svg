@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="elGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#151521"/>
+      <stop offset="100%" stop-color="#0B0B10"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Rounded Rect -->
+  <rect width="64" height="64" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" stroke="url(#elGrad)" stroke-width="1.5" stroke-opacity="0.5"/>
+  
+  <!-- Abstract Geometric Monogram EL -->
+  <!-- E -->
+  <path d="M18 18V46H34M18 32H30M18 18H34" stroke="url(#elGrad)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- L Accent -->
+  <path d="M38 24V46H48" stroke="#38BDF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Geometric dot -->
+  <circle cx="48" cy="24" r="3" fill="#8B5CF6"/>
+</svg>
